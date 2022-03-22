@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+h2 { text-align: center;}
+table { border-collapse: collapse; width: auto; margin: auto;}
+th, td { border: 1px solid #222; padding: 10px 5px; }
+
+</style>
+</head>
+<body>
+<h2>회원가입정보</h2>
+<table>
+	<tr>
+		<th>아이디</th>
+		<td><input type='text' name='id'></td>
+	</tr>
+	<tr>
+		<th>비밀번호</th>
+		<td><input type='password' name='pw'></td>
+	</tr>
+	<tr>
+		<th>비밀번호확인</th>
+		<td><input type='text' name='id'></td>
+	</tr>
+		<tr>
+		<th>이름</th>
+		<td><input type='text' name='name'></td>
+	</tr>	
+		<tr>
+		<th>성별</th>
+		<td><label><input type="radio" name='gender' value="남" checked >남 &nbsp &nbsp &nbsp</label>
+		<label><input type="radio" name='gender' value="여" >여</label></td>
+	</tr>
+	<tr>
+		<th>전화번호</th>
+		<td>
+			<div> <select name="tel">
+				<option>02</option>
+				<option>062</option>
+				<option>063</option></select>
+				<input style="width: 50px;" type='text' name='num'> <input style="width: 50px;" type='text' name='num'>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<th>SNS수신여부</th>
+		<td><label><input type="checkbox"  value='수신함' >수신함</label>	</td>
+	</tr>
+	<tr>
+		<th>이메일</th>
+		<td>
+			<div>
+			<input style="width: 100px;" type="text"> @ 
+			<select style="width: 80px;" name='email'>
+				<option>직접입력</option>
+				<option>naver.com</option>
+				<option>hanmail.net</option></select>
+			</div>
+		</td>
+	</tr>
+		<tr>
+		<th>사진등록</th>
+		<td><input type='file' name='filename'></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type='submit' value='회원가입'></td>
+	</tr>
+</table>
+</body>
+</html>
