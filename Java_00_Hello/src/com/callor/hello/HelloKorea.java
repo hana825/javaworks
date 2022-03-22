@@ -10,10 +10,23 @@ package com.callor.hello;
 public class HelloKorea {
 	/*
 	 * main 키워드 +[Ctrl] + [Space] : 상용구 작성
-	 * 주황글자(public, class, static, void): Keyword, Reserved word(예약어), Command word(명령어)
+	 * package, public, class, static, void: Keyword, Reserved word(예약어), Command word(명령어)
 	 */
 	public static void main(String[] args) {
+		System.out.println("반갑습니다");
+		System.out.println(30 + 40);
+		System.out.println(30 * 40);
+		System.out.println(40 - 30);
+		System.out.println(40 / 2);
+		System.out.println(30 + 40 * 40 / 2 - 100);
 		
+		System.out.println("30 + 40 = " + (30+40));
+		System.out.println("30 + 40 = " + "70");
+		
+		// 문자열 덧셈 연산 = 연결 연산
+		// 문자열 + 문자열은 문자열을 연결하여 결과를 만든다
+		System.out.println("대한" + "민국");
+		System.out.println("대한민국");
 	}
 
 }
