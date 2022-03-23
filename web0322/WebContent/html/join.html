@@ -2,19 +2,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>회원가입</title>
 <style>
-table { border-collapse: collapse; width: auto; margin: auto;}
-th, td { border: 1px solid #222; padding: 10px 5px; }
+	table { border-collapse: collapse; width: auto; margin: auto;}
+	th, td { border: 1px solid #222; padding: 10px 5px; }
+	input[name=tel] { width: 60px;}
 
 </style>
 </head>
 <body>
 <!-- 
 입력항목의 값(데이터)을 전송하려면 form태그에 선언한다
-각 입력항목은 name속성을 가져야 한다. 
+각 입력항목은 name속성을 가져야 한다.
+
+form 태그내에 file 태그를 전송하는 경우
+	1. form태그 전송방식이 post
+	2. 파일데이터전송가능 형태를 지정: enctype='multipart/form-data' 
 -->
-<form action="index.html">
+<form method='post' action="index.html" enctype='multipart/form-data'>
 <table>
 <colgroup>
 	<col width="150px">
@@ -45,11 +50,11 @@ th, td { border: 1px solid #222; padding: 10px 5px; }
 	<tr>
 		<th>전화번호</th>
 		<td>
-			<div> <select name="tel">
+			<div> <select name="local">
 				<option>02</option>
 				<option>062</option>
 				<option>063</option></select> -
-				<input style="width: 50px;" type='text' name='num'> - <input style="width: 50px;" type='text' name='num'>
+				<input type='text' name='tel'> - <input type='text' name='tel'>
 			</div>
 		</td>
 	</tr>
@@ -74,7 +79,7 @@ th, td { border: 1px solid #222; padding: 10px 5px; }
 		<td><input type='file' name='filename'></td>
 	</tr>
 	<tr>
-		<td colspan="2" align="center"><input type='submit' name="signin" value='회원가입'></td>
+		<td colspan="2" align="center"><input type='submit' name="join" value='회원가입'></td>
 	</tr>
 </table>
 <input type="button" value="닫기" onclick="window.close()">
