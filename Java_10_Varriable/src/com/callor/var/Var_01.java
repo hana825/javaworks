@@ -12,9 +12,8 @@ public class Var_01 {
 		// 정수(integer), 실수
 		// 정수형(int type), 실수형(float type)
 		
-		// 변수는 데이터를 기억장소에 임의로 선언해놓는 별명
+		// 변수는 연산을 수행할 데이터를 저장할 저장소(기억장소)
 		// datatype 변수명;
-		
 		
 		
 		/*
