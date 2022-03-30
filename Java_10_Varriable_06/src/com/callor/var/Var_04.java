@@ -15,11 +15,15 @@ public class Var_04 {
 			System.out.println(intNum1 + " 는(은) " + intNum2 + " 보다 크지 않다");
 		}
 		
+		
 		if (bCompare) {
 			System.out.printf("%d 는 %d 보다 크다", intNum1, intNum2);
 		} else {
 			System.out.printf("%d 는 %d 보다 크지 않다", intNum1, intNum2);
 		}
+		
+		
+		
 		
 	}
 }
