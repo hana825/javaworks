@@ -33,3 +33,7 @@
 * boolean 연산하기 => 비교연산
 * if() 문 기본사용법
 	
+### :seedling:[boolean, method](https://github.com/hana825/javaworks/tree/master/Java_20_Control_01)
+* 2022-03-31
+* boolean algebra
+* method 선언하기

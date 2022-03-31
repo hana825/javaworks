@@ -35,7 +35,7 @@ public class Method_02 {
 		return true;
 	}
 	public static String nation() {
-		return "Hello";
+		return "HelloKorea";
 	}
 	
 }
