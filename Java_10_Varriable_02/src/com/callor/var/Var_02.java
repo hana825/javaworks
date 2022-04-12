@@ -2,7 +2,7 @@ package com.callor.var;
 
 public class Var_02 {
 	public static void main(String[] args) {
-		int intNum1 = 0;				// 변수의 선언과 clesr
+		int intNum1 = 0;				// 변수의 선언과 clear
 		/*
 		 * main() {} 블럭에서 선언된 intNum1 변수는
 		 * main() {} 블럭이 끝나는 시점에 모두 소멸된다.
