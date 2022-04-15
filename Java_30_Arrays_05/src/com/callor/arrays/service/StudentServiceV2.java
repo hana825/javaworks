@@ -54,6 +54,14 @@ public class StudentServiceV2 extends StudentServiceV1 {
 		} else {
 			System.out.println("입력을 모두 마쳤습니다.");
 		}
+		
+		if(index >= strStudents.length) {
+			System.out.println("입력이 중단되었습니다.");
+		} else {
+			System.out.println("입력을 모두 마쳤습니다.");
+		}
+		
+		
 //		System.out.println("index : " + index);
 //		System.out.println("종료");
 		return 0;
