@@ -49,40 +49,29 @@ public class ScoreServiceV1 {
 		System.out.println(Line.sLine(50));
 		System.out.println("이  름\t국어\t영어\t수학\t총점\t평균");
 		System.out.println(Line.sLine(50));
-		
-		for(int i = 0; i < scores.length; i ++) {
-			System.out.print(scores[i].getStName() + "\t");
-			System.out.print(scores[i].getIntKor() + "\t");
-			System.out.print(scores[i].getIntEng() + "\t");
-			System.out.print(scores[i].getIntMath() + "\t");
-			System.out.print(scores[i].getIntSum() + "\t");
-			System.out.printf("%3.2f\n",scores[i].getfAvg());
-		}
-		System.out.println(Line.sLine(50));
-		// 과제
-		
-		
-		
-		
-	} // printScore()
-	
-	public void sumScore() {
-		
+
 		int KorSum = 0;
 		int EngSum = 0;
 		int MathSum = 0;
 		int AllSum = 0;
 		float AvgSum = 0.0f;
-		for(int i = 0; i < scores.length; i ++) {
+
+		for (int i = 0; i < scores.length; i++) {
+			System.out.print(scores[i].getStName() + "\t");
+			System.out.print(scores[i].getIntKor() + "\t");
+			System.out.print(scores[i].getIntEng() + "\t");
+			System.out.print(scores[i].getIntMath() + "\t");
+			System.out.print(scores[i].getIntSum() + "\t");
+			System.out.printf("%3.2f\n", scores[i].getfAvg());
 			KorSum += scores[i].getIntKor();
 			EngSum += scores[i].getIntEng();
 			MathSum += scores[i].getIntMath();
 			AllSum += scores[i].getIntSum();
 			AvgSum += scores[i].getfAvg();
 		}
-		System.out.printf("\t%d\t%d\t%d\t%d\t",KorSum, EngSum, MathSum, AllSum);
-		System.out.printf("%3.2f\n", AvgSum/scores.length);
-		
-		
-	}
+		System.out.println(Line.sLine(50));
+		System.out.printf("\t%d\t%d\t%d\t%d\t%3.2f\n", KorSum, EngSum, MathSum, AllSum, AvgSum / scores.length);
+
+	} // printScore()
+
 }
