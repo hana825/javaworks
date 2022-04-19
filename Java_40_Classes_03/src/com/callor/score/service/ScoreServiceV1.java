@@ -42,7 +42,7 @@ public class ScoreServiceV1 {
 
 		}
 	}
-	
+
 	public void printScore() {
 		System.out.println(Line.dLine(50));
 		System.out.println("빛나고교 성적표 v1");
@@ -60,28 +60,29 @@ public class ScoreServiceV1 {
 		}
 		System.out.println(Line.sLine(50));
 		// 과제
+		
+		
+		
+		
+	} // printScore()
+	
+	public void sumScore() {
+		
 		int KorSum = 0;
 		int EngSum = 0;
 		int MathSum = 0;
 		int AllSum = 0;
 		float AvgSum = 0.0f;
-		for(int i = 0; i < scores.length; i++) {
+		for(int i = 0; i < scores.length; i ++) {
 			KorSum += scores[i].getIntKor();
-		}
-		for(int i = 0; i < scores.length; i++) {
 			EngSum += scores[i].getIntEng();
-		}
-		for(int i = 0; i < scores.length; i++) {
 			MathSum += scores[i].getIntMath();
-		}
-		for(int i = 0; i < scores.length; i++) {
 			AllSum += scores[i].getIntSum();
-		}
-		for(int i = 0; i < scores.length; i++) {
 			AvgSum += scores[i].getfAvg();
 		}
 		System.out.printf("\t%d\t%d\t%d\t%d\t",KorSum, EngSum, MathSum, AllSum);
-		System.out.printf("%3.2f\n", AvgSum);
+		System.out.printf("%3.2f\n", AvgSum/scores.length);
+		
 		
 	}
 }

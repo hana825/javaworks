@@ -10,6 +10,7 @@ public class ScoreControllerV1 {
 		ScoreServiceV1 scService = new ScoreServiceV1(stNames);
 		scService.makeScore();
 		scService.printScore();
+		scService.sumScore();
 	}
 
 }

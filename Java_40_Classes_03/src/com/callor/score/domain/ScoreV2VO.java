@@ -49,7 +49,7 @@ public class ScoreV2VO extends Object{
 		return "ScoreV2VO [stName=" + stName + ", intKor=" + intKor + ", intEng=" + intEng + ", intMath=" + intMath
 				+ ", intSum=" + getIntSum() + ", fAvg=" + getfAvg() + "]";
 	}
-	
+
 
 
 
