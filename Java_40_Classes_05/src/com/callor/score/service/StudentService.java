@@ -10,6 +10,11 @@ import com.callor.score.domain.StudentVO;
  */
 public interface StudentService {
 	
+	/*
+	 * 추상 메서드
+	 * : 메서드의 접근제한자(public), 메서드의 이름, 매개변수, return type만 정의한 것
+	 * 연산(실행)되는 
+	 */
 	public void loadStudent();
 	public StudentVO[] getStudents();
 	// stNum 학번을 학생데이터들에서 찾아서(findByNum) 학생데이터를 return 하기
