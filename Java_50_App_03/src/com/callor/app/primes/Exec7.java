@@ -1,4 +1,4 @@
-package com.callor.app.exec;
+package com.callor.app.primes;
 
 public class Exec7 {
 
