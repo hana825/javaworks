@@ -29,7 +29,7 @@ public class ExecV6 {
 					System.out.println();
 				}
 			}
-			
+
 		}
 
 		System.out.println("\n" + dLine.repeat(50));
