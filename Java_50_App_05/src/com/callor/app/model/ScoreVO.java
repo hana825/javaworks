@@ -49,7 +49,6 @@ public class ScoreVO {
 	}
 
 	public float getStAvg() {
-		stAvg = .2f;
 		return stAvg;
 	}
 
@@ -59,7 +58,8 @@ public class ScoreVO {
 
 	@Override
 	public String toString() {
-		return "" + stNum + "\t" + stKor + "\t" + stEng + "\t" + stMath + "\t" + stSum + "\t" + stAvg;
+		return "" + stNum + "\t" + stKor + "\t" + stEng + "\t" + stMath + "\t" + stSum;
+//		+ "\t" + stAvg;
 
 	}
 
