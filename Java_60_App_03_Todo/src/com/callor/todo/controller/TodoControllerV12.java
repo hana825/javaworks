@@ -35,6 +35,7 @@ public class TodoControllerV12 {
 				printTodo(todoList);
 				
 			} else if(mainMenu == 4) {
+				// 4. 완료처리하기
 				List<TodoVO> todoList = toService.todoSelectAll();
 				printTodo(todoList);
 				System.out.println(Line.dLine(50));
@@ -46,7 +47,7 @@ public class TodoControllerV12 {
 						continue;
 					}
 					if(num == -1) break;
-					toService.compTodo(num);;
+					toService.compTodo(num);
 				}
 				
 			} // end if
