@@ -36,7 +36,14 @@ public class TodoControllerV12 {
 				printTodo(todoList);
 				
 			} else if(mainMenu == 4) {
+<<<<<<< HEAD
 				// 4. 완료처리
+=======
+				// 4. 완료처리하기
+				List<TodoVO> todoList = toService.todoSelectAll();
+				printTodo(todoList);
+				System.out.println(Line.dLine(50));
+>>>>>>> a48256b88c681e1838d00a94a11d429ebf009b17
 				while(true) {
 					List<TodoVO> todoList = toService.todoSelectAll();
 					printTodo(todoList);

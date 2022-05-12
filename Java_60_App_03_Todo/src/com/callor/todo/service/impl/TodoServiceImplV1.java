@@ -11,10 +11,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 import java.util.UUID;
 
 import com.callor.todo.model.TodoVO;
+import com.callor.todo.model.TodoVO.TodoVOBuilder;
 import com.callor.todo.service.TodoService;
+import com.callor.utils.Line;
 
 public class TodoServiceImplV1 implements TodoService {
 	
@@ -158,6 +161,67 @@ public class TodoServiceImplV1 implements TodoService {
 			System.out.println("TODO List 데이터 범위를 벗어났습니다");
 		}
 		
-	}
+		// 제거해버리기~~~!
+//      Scanner scan = new Scanner(System.in);
+//      System.out.println("어떤거 완료처리?");
+//      int index = scan.nextInt();
+//      if((index-1) < 0 || index > todoList.size()){
+//         System.out.println("1부터" + todoList.size() + "까지만 입력");
+//      } else {
+//         todoList.remove(index-1);
+//      }
+//      System.out.println(Line.sLine(50));
+		
+		// if()문 넣어보려던거
+//		int size = todoList.size();
+//	      int index = 0;
+//	      for(index = 0; index < size; index ++) {
+//	         System.out.printf("%d\t", num+1);
+//	         System.out.print(todoList.get(num).getSdate() + "\t");
+//	         System.out.print(todoList.get(num).getStime() + "\t");
+//	         System.out.print(todoList.get(num).getTContent() + "\t");
+//	         if((num-1) < 0 || num > size ) {
+//	            break;
+//	            
+//	         } else {
+//	            
+//	            String comp = todoList.get(num).getEdate() == null || todoList.get(num).getEdate().isEmpty() ? "완료됨" : "진행중";
+//	            System.out.println(comp);
+//	         }
+//	      }
 
+		// 모르겠다~~~!!!
+		Date curDate = new Date(System.currentTimeMillis());
+		
+		// Date 객체의 값을 날짜, 시각 문자열 타입으로 변경하기 위한 객체 생성
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
+		
+		// 현재 날짜, 시각에 해당하는 문자열 생성하기
+		// SimpleDateFormat에 의해서 패턴대로 날짜 시각 문자열을 만든다.
+		String today = dateFormat.format(curDate);
+		String time = timeFormat.format(curDate);
+
+		System.out.println(Line.dLine(50));
+		System.out.print("No\t");
+		System.out.print("완료일자\t");
+		System.out.print("완료시간\t");
+		System.out.print("할 일\t");
+		System.out.println("상태");
+		System.out.println(Line.sLine(50));
+		
+		int size = todoList.size();
+		for(num = 0; num < size; num ++) {
+			System.out.printf("%d\t", num+1);
+			todoList.get(num).setEdate(today);
+			todoList.get(num).setEtime(time);
+			System.out.print(todoList.get(num).getEdate() + "\t");
+			System.out.print(todoList.get(num).getEtime() + "\t");
+			System.out.print(todoList.get(num).getTContent() + "\t");
+			
+			String comp = todoList.get(num).getEdate() == null || todoList.get(num).getEdate().isEmpty() ? "진행중" : "완료됨";
+			System.out.println(comp);
+		}
+
+	}
 }
