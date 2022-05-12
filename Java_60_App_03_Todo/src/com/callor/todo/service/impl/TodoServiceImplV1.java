@@ -11,11 +11,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 import java.util.UUID;
 
 import com.callor.todo.model.TodoVO;
-import com.callor.todo.model.TodoVO.TodoVOBuilder;
 import com.callor.todo.service.TodoService;
 import com.callor.utils.Line;
 
