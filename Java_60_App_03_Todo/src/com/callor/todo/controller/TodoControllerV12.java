@@ -24,6 +24,7 @@ public class TodoControllerV12 {
 				continue;
 			}
 			if(mainMenu == 1) {
+				// 1. TODO 추가하기
 				while(true) {
 					String content = inService.inputContent();
 					if(content.equals("QUIT")) {
@@ -32,9 +33,36 @@ public class TodoControllerV12 {
 					toService.todoInsert(content);
 				}
 			} else if(mainMenu == 2) {
+				// 2. TODO List 보기
 				List<TodoVO> todoList = toService.todoSelectAll();
 				printTodo(todoList);
-				
+			} else if(mainMenu == 3) {
+				// 3. TODO 변경하기
+				while(true) {
+					List<TodoVO> todoList = toService.todoSelectAll();
+					printTodo(todoList);
+					System.out.println(Line.dLine(60));
+					System.out.println("내용을 변경할 할 일을 선택하세요");
+					Integer num = inService.selectTodo();
+					String content = inService.inputContent();
+					if(content.equals("QUIT")) break;
+					toService.update(num, content);
+//					TodoVO tVO;
+//					try {
+//						tVO = todoList.get(num - 1);
+//					} catch (Exception e) {
+//						System.out.println("할 일 리스트를 잘못 선택");
+//						System.out.println("리스트 범위 넘어감");
+//						continue;
+//					}
+//					// 할 일을 입력받고 
+//					System.out.println(Line.dLine(60));
+//					System.out.println("변경할 내용을 입력하세요");
+//					System.out.println(Line.sLine(60));
+//					String content = inService.inputContent();
+//					// 입력받은 내용을 선택한 Todo에 반영하기
+//					tVO.setTContent(content);
+				}
 			} else if(mainMenu == 4) {
 				// 4. 완료처리
 				while(true) {
@@ -52,9 +80,14 @@ public class TodoControllerV12 {
 					toService.compTodo(num);
 				}
 			} else if(mainMenu == 5) {
+				// 5. 파일에 저장하기
 				toService.saveTodo(null);
-			} // end if
+			} else if(mainMenu == 6){
+				// 6. 종료하기
+				break;
+			}
 		} // end while
+		System.out.println("업무종료 퇴근!!!!!!");
 		
 	} // end main
 	
