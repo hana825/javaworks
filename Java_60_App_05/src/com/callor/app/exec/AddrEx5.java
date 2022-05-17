@@ -39,15 +39,10 @@ public class AddrEx5 {
 		// addrs.add(AddressVO) : 데이터를 추가하기
 		addrs.set(2, adVO);
 		System.out.println(Line.sLine(80));
+		System.out.println("↓↓↓오름차순 정렬↓↓↓");
 		adService.printAddr(addrs);
 		
-		for(int i = 0; i < addrs.size(); i ++) {
-			for(int j = 0; j < addrs.size(); i ++) {
-				if(addrs.get(i).getAge() > addrs.get(j).getAge()) {
-//					AddressVO addVO = AddressVO.builder().age(i).build();
-				}
-			}
-		}
+		
 		
 		
 	}

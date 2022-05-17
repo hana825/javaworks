@@ -34,9 +34,20 @@ public class AddrServiceV1 {
 //		}
 //	}
 	public void printAddr(List<AddressVO> addrs) {
+		
+		for(int i = 0; i < addrs.size(); i ++) {
+			for(int j = i + 1; j < addrs.size(); j ++) {
+				if(addrs.get(i).getAge() > addrs.get(j).getAge()) {
+					AddressVO addVO = addrs.get(j);
+					addrs.set(j,addrs.get(i));
+					addrs.set(i, addVO);
+				}
+			}
+		}
 		for(AddressVO vo : addrs) {
 			System.out.println(vo);
 		}
+		
 	}
 
 }
