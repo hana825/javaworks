@@ -41,6 +41,14 @@ public class AddrEx5 {
 		System.out.println(Line.sLine(80));
 		adService.printAddr(addrs);
 		
+		for(int i = 0; i < addrs.size(); i ++) {
+			for(int j = 0; j < addrs.size(); i ++) {
+				if(addrs.get(i).getAge() > addrs.get(j).getAge()) {
+//					AddressVO addVO = AddressVO.builder().age(i).build();
+				}
+			}
+		}
+		
 		
 	}
 
